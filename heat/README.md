@@ -12,6 +12,7 @@ openstack stack create -t cluster.yaml --parameter whitelisted_ip_range="10.8.0.
 Source openrc.sh file to authenticate and retrieve token from Keystone identity service.
 
 
+
 ### Create infrastructure with HEAT template
 
 ```shell
