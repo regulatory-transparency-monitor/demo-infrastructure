@@ -1,4 +1,4 @@
-# Bootstrap cluster with HEAT and Kubespray
+# Bootstrap a cluster with HEAT and Kubespray
 It will create a 1 bastion node with a floating ip, 1 master, 2 worker nodes cluster with:
 - cri-o container engine
 - cilium CNI

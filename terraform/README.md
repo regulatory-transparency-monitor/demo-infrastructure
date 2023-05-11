@@ -1,4 +1,4 @@
-#
+# Bootstrap a cluster with terraform and Kubespray
 For general reference, the following sources were used:
 
 [Kubespray - Terraform for OpenStack](https://github.com/kubernetes-sigs/kubespray/blob/v2.20.0/contrib/terraform/openstack/README.md)
@@ -21,7 +21,7 @@ ssh-add ~/.ssh/id_rsa.kubespray
 
 Source the openrc.sh file 
 ```shell
-source PCP-JMY29J4-openrc.sh
+source ../PCP-JMY29J4-openrc.sh
 ```
 
 Download kubespray
@@ -73,7 +73,7 @@ It will create a 1 master 3 worker nodes cluster with:
 - cilium CNI
 - openstack external cloud provider
 
-> cluster.tfvars holds the varibles for terraform 
+> [cluster.tfvars](inventory/demo-k8s-cluster/cluster.tfvars) holds the varibles for terraform 
 
 ## Apply the Terraform plan
 ```shell
@@ -82,15 +82,16 @@ terraform apply -var-file=cluster.tfvars
 ```
 
 ## Configure the kubespray inventory
-> all/all.yml
+> [all/all.yml](inventory/demo-k8s-cluster/group_vars/all/all.yml)
 
-> all/cri-o.yml
+> [all/cri-o.yml](inventory/demo-k8s-cluster/group_vars/all/cri-o.yml)
 
-> all/openstack.yml
+> [all/openstack.yml](inventory/demo-k8s-cluster/group_vars/all/openstack.yml)
 
-> k8s_cluster/k8s-cluster.yml
+> [k8s_cluster/k8s-cluster.yml](inventory/demo-k8s-cluster/group_vars/k8s_cluster/k8s-cluster.yml)
 
-> k8s_cluster/addons.yml for Dashboard deployment
+> [k8s_cluster/addons.yml ](inventory/demo-k8s-cluster/group_vars/k8s_cluster/addons.yml)
+> for Dashboard deployment
 
 ## Terrarform commands 
 Initialize Terraform: 
