@@ -1,4 +1,4 @@
-# Demo-infrastrcuture
+# Demo-infrastructure
 This repository holds the playbooks, scripts and templates for creating the infrastructure needed for the RTM.  
 
 # Setting up the infrastructure on OpenStack 
