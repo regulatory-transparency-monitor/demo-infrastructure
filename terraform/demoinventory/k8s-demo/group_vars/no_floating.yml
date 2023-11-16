@@ -1,0 +1,1 @@
+ansible_ssh_common_args: "-o ProxyCommand='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -W %h:%p -q debian@195.15.192.87 {% if ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file }}{% endif %}'"
